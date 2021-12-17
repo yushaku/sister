@@ -4,7 +4,10 @@
       <meta charset="UTF-8" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Fuzzy+Bubbles&family=Poppins:ital,wght@0,200;0,500;0,600;0,800;1,300;1,500;1,600;1,800&display=swap" rel="stylesheet">
+      <link
+         href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Fuzzy+Bubbles&family=Poppins:ital,wght@0,200;0,500;0,600;0,800;1,300;1,500;1,600;1,800&display=swap"
+         rel="stylesheet"
+      />
       <link rel="stylesheet" href="./assets/css/style.css" />
       <title>Document</title>
    </head>
@@ -14,19 +17,22 @@
             <h1>Happy birthday bà chằn</h1>
             <p>From your handsome brother with love</p>
          </div>
-         <div class="card active" onclick=openCard()>
+         <div class="card active" onclick="openCard()">
             <div class="img">
-               <img src="./assets/img/29873030_1019555631516254_9063764888636762535_o.jpg" alt="">
+               <img src="./assets/img/29873030_1019555631516254_9063764888636762535_o.jpg" alt="" />
             </div>
             <div class="info">
                <h1>Lê Thị Duyên</h1>
-               <p>Chúc bà chị sinh nhật zui vẻ, thêm tuổi mới thêm bản lĩnh, kiếm được nhiều xiền, thoải mái ăn chơi 💖</p>
+               <p>
+                  Chúc bà chị sinh nhật zui vẻ, thêm tuổi mới thêm bản lĩnh, kiếm được nhiều xiền, thoải mái
+                  ăn chơi 💖
+               </p>
                <p>Tuổi mới: <span>già + 1</span></p>
-
             </div>
             <div class="audio">
                <audio controls>
                   <source src="https://tainhacmienphi.biz/get/song/api/207304" type="audio/ogg" />
+                  <source src="https://tainhacmienphi.biz/get/song/api/207304" type="audio/mpeg" />
                </audio>
             </div>
             <div class="message">
@@ -38,17 +44,16 @@
       <script>
          VanillaTilt.init(document.querySelectorAll(".card"), {
             max: 25,
-            easing: "cubic-bezier(.03,.98,.52,.99)", 
+            easing: "cubic-bezier(.03,.98,.52,.99)",
             speed: 700,
          });
 
-
-         const card = document.querySelector('.card');
-         const title = document.querySelector('.title')
-         const openCard = function(){
-            card.classList.toggle("active")
-            title.classList.toggle("active")
-         }
+         const card = document.querySelector(".card");
+         const title = document.querySelector(".title");
+         const openCard = function () {
+            card.classList.toggle("active");
+            title.classList.toggle("active");
+         };
       </script>
    </body>
 </html>
