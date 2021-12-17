@@ -1,0 +1,229 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  font-family: "Dancing Script", "Poppins", cursive;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(199, 185, 107, 0.692)), to(#c381c9));
+  background: linear-gradient(rgba(199, 185, 107, 0.692), #c381c9);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.title {
+  font-size: 20px;
+  margin: 18px 0;
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+}
+
+.title h1 {
+  visibility: hidden;
+}
+
+.title p {
+  visibility: visible;
+  font-size: 40px;
+}
+
+.title.active h1 {
+  visibility: visible;
+}
+
+.title.active p {
+  visibility: hidden;
+  display: none;
+}
+
+.card {
+  width: 350px;
+  height: 70vh;
+  text-align: center;
+  position: relative;
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  z-index: 5;
+  -webkit-box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.11);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.card .img {
+  width: 100%;
+  border-radius: 50%;
+  position: absolute;
+  top: 10%;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  z-index: 120;
+  image-rendering: optimizeQuality;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(0, 0, 10px);
+          transform: translate3d(0, 0, 10px);
+}
+
+.card .img img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 6px solid rgba(94, 92, 92, 0.308);
+  -o-object-position: 0px 0;
+     object-position: 0px 0;
+}
+
+.card .info {
+  -webkit-transition: all 1s linear;
+  transition: all 1s linear;
+  top: 50%;
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  color: #fff;
+  z-index: 150;
+}
+
+.card .info h1 {
+  font-size: 28px;
+}
+
+.card .info p {
+  font-family: "Fuzzy Bubbles";
+  width: 70%;
+  margin: auto;
+  font-size: 18px;
+  padding: 8px 0;
+}
+
+.card .audio {
+  position: absolute;
+  -webkit-transition: all 1s linear;
+  transition: all 1s linear;
+  top: 85%;
+  width: 100%;
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+  z-index: 100;
+}
+
+.card .message {
+  opacity: 0;
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
+  font-family: "Fuzzy Bubbles";
+  font-weight: 600;
+  color: #fff;
+  position: absolute;
+  width: 100%;
+  font-size: 20px;
+  -webkit-transition-delay: 0.7s;
+          transition-delay: 0.7s;
+  display: block;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card.active {
+  width: 350px;
+  height: 60vh;
+  text-align: center;
+  position: relative;
+  -webkit-box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.11);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.card.active .img {
+  width: 100%;
+  border-radius: 50%;
+  position: absolute;
+  top: 10%;
+}
+
+.card.active .img img {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 6px solid rgba(94, 92, 92, 0.308);
+}
+
+.card.active .info {
+  opacity: 0;
+  top: 60%;
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  color: #fff;
+}
+
+.card.active .info h1 {
+  font-size: 28px;
+}
+
+.card.active .info p {
+  font-family: "Fuzzy Bubbles";
+  width: 70%;
+  margin: auto;
+  font-size: 18px;
+}
+
+.card.active .audio {
+  position: absolute;
+  opacity: 0;
+  top: 90%;
+  width: 100%;
+}
+
+.card.active .message {
+  opacity: 1;
+  bottom: 10%;
+}
+
+.card.active .message p {
+  -webkit-box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.11);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  width: 50%;
+  padding: 8px;
+}
+/*# sourceMappingURL=style.css.map */
